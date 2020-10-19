@@ -1,0 +1,20 @@
+<?php
+
+extract($_POST);	//extraer todos los valores del metodo post del formulario de actualizar
+	require("../controlador/conexion.php");
+	$sentencia="UPDATE empleado SET Idcargo=$cargo,Nombre='$nombre',Apellidos='$apellido',Direccion='$direccion',Telefono='$telefono',DPI='$dpi',nit='$nit',fecha_n='$fecha' WHERE Idempleado='$id'";
+	//la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");
+	$resent=mysqli_query($conexion,$sentencia);
+	if ($resent==null) {
+		echo "Error de procesamiento no se han actuaizado los datos";
+		echo '<script>alert("ERROR EN PROCESAMIENTO NO SE ACTUALIZARON LOS DATOS")</script> ';
+		header("location: ../modelo/actualizaem.php");	
+		echo "<script>location.href='../vistas/actualizarempleado.php'</script>";
+	}else {
+		echo '<script>alert("REGISTRO ACTUALIZADO")</script> ';
+		echo "<script>location.href='../vistas/tablaem.php'</script>";
+	}
+
+?>
+
+

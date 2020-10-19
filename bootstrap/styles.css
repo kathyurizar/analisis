@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.form {
+  background-color: #58ed60;
+  justify-content: center;
+  width: 100%;
+  max-width: 360px;
+  padding: 1em 1em 1em 1em;
+  margin: 0 auto;
+  flex-direction: column;
+  display: flex;
+  border: solid #0a0a0a;
+  border-radius: 30px;
+  box-shadow: 0 1px 3px 1px rgba(5, 5, 5, 5);
+}
+
+label {
+  text-align: left;
+  color: #0a0a0a;
+  flex-direction: column;
+  display: flex;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+button {
+  color: #1cffad;
+  max-width: 80px;
+  background-color: black;
+}
+
+.gender {
+  flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+}
+
+h4 {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
